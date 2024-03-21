@@ -59,6 +59,9 @@ while running:
                 broccoli.score = True
                 score += 1
         
+        score_text = config.presstart_font.render(f"Score: {score}", True, (255, 255, 255))
+        screen.blit(score_text, (config.screen_width // 2 + 30, config.screen_height - 620))
+        
         # Spawn new broccoli
         if pygame.time.get_ticks() % spawn_delay == 0:
             broc_rect = broc_img.get_rect()
